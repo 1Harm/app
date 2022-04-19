@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+        *, *:before, *:after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+        body {
+            font-family: 'PT Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.428571429;
+            font-weight: 400;
+            color: #fff;
+            width: 50%;
+
+
+            background: url(https://static.tildacdn.com/tild3964-3165-4138-b736-613332383663/IMG_5655.jpg) ;
+        }
+        form-item{
+            margin: 0 auto;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width:600px;
+            position: fixed; top: 50%; left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+        }
+        .section {
+            background-color: #0093E9;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+
+        }
+
+        header {
+            display: block;
+            position: relative;
+            z-index: 1;
+            margin-top: 40px;
+            padding: 48px;
+        }
+        @media (max-width: 440px) {
+            header {
+                padding: 48px 24px;
+            }
+        }
+        h1 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        main {
+            flex: 1;
+            padding: 0 48px;
+        }
+        @media (max-width: 440px) {
+            main {
+                padding: 0 24px;
+            }
+        }
+
+        form {
+
+
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+
+        .row{
+            margin-top: 60px;
+
+        }
+
+        .tx1 {
+            margin-top: 10px;
+        }
+        .form-item input
+        {
+            display: block;
+            color: grey;
+            font-size: 16px;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+            padding: 8px 0;
+            appearance: none;
+            outline: none;
+        }
+        .box-item {
+            height: 60px;
+            margin-bottom: 16px;
+        }
+
+
+        .form-item-double .form-item {
+            flex: 1 1 auto;
+        }
+        .form-item-double .form-item:nth-child(1) {
+            padding-right: 16px;
+        }
+        .form-item-double .form-item:nth-child(2) {
+            padding-left: 16px;
+        }
+
+
+        .form-item-triple .radio-label {
+            flex: 1 1 auto;
+            text-align: left;
+        }
+        .form-item-triple .radio-label label {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .form-item-triple .form-item {
+            flex: 3 1 auto;
+            text-align: center;
+            margin: 0;
+        }
+        .form-item-triple .form-item label, .form-item-triple .form-item input[type="radio"] {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 4px;
+        }
+
+        .submit {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 8px 48px;
+            margin-top: 32px;
+            border: 2px solid #075BB4;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 150px;
+            margin-bottom: 15px;
+            background-color: green;
+        }
+
+
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 700px;
+            height: 800px;
+            margin-top: -600px;
+            margin-left: -400px;
+            background: green;
+            border-radius: 40%;
+            animation: shift 20s infinite linear;
+            z-index: 0;
+        }
+
+
+        @keyframes shift{
+            from{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link class="favicon" rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/80e7d89c39.js"></script>
+</head>
+<body>
+<div class="row">
+    <section class="section">
+        <header>
+            <h1>Register</h1>
+            <h2>Please fill your information in this form</h2>
+        </header>
+        <main>
+            <form>
+                <div class="form-item box-item">
+                    <input type="text" name="name" class="tx1" placeholder="Username" data-required>
+                </div>
+                <div class="form-item box-item">
+                    <input type="email" name="email" class="tx1" placeholder="Email" data-email data-required>
+                </div>
+                <div class="form-item box-item">
+                    <input type="pass" name="pass" placeholder="Password" data-pass data-required data-count="8" >
+                </div>
+                <div class="form-item box-item">
+                    <input type="text" name="phone" placeholder="Phone" data-required data-number data-count="10">
+                </div>
+                <div class="form-item">
+                    <span id="submit" class="submit">Submit</span>
+                </div>
+            </form>
+        </main>
+        <i class="wave"></i>
+    </section>
+</div>
+</body>
+</html>
