@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700;900&display=swap');
+        body{
+            -webkit-font-smoothing: antialiased;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        h2, h3, h4, h5, h6{
+            font-family: 'Merienda One', cursive;
+        }
+        p{
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container{
+            width:1170px;
+
+            margin: 0 auto;
+        }
+        .header{
+            padding-top: 21px;
+            height: 200px;
+            background-color: #ffffff;
+
+        }
+        .header1{
+            padding-top: 21px;
+            height: 900px;
+            background-color: #F4D03F;
+            background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+
+        }
+        header a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .menu{
+            /*aligns all elements*/
+            display: flex;
+        }
+        ul,li{
+            display: block;
+            padding: 0;
+            margin-left: 100px;
+        }
+        .menu li a{
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .menu li{
+            text-decoration: none;
+            margin-right: 56px;
+        }
+        .tel a{
+            font-size: 20px;
+            color: #000;
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+        }
+        .Log{
+            margin-right: 250px;
+        }
+        a:hover{
+            color: #000;
+        }
+        span{
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+        }
+        .main-text h1{
+            color: #fff;
+            font-size: 72px;
+            margin-top: 150px;
+            transform: translate(0px,120%);
+            opacity: 0;
+            transition: all 0.8s ease 0s;
+        }
+        .main-text._active h1{
+
+            transform: translate(0px,0px);
+            opacity: 1;
+        }
+        .text p{
+            color: #fff;
+            font-size: 24px;
+            margin-top: 32px;
+
+            transform: translate(0px,120%);
+            opacity: 0;
+            transition: all 0.8s ease 0s;
+        }
+        .text._active p{
+            transform: translate(0px,0px);
+            opacity: 1;
+            transition: all 0.8s ease 0.5s;
+        }
+        .btn-warning a{
+            color: #fff;
+            font-size: 20px;
+        }
+        .title{
+            padding: 40px;
+        }
+        .title h2{
+            font-size: 52px;
+            color: #000;
+
+            transform: translate(0px,120%);
+            opacity: 0;
+            transition: all 0.8s ease 0s;
+        }
+        .title._active h2{
+            transform: translate(0px,0px);
+            opacity: 1;
+            transition: all 0.8s ease 0.5s;
+        }
+        .list {
+            margin-top: 70px;
+            margin-left: 240px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .list img {
+            display: block;
+            position: relative;
+            margin: 0 5px 10px
+        }
+        .lis {
+            margin-left: 240px;
+            margin-top: 70px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .lis img {
+            display: block;
+            position: relative;
+            margin: 0 60px 120px
+        }
+
+        .info p b{
+            font-size: 24px;
+        }
+        .info p{
+            font-size: 12px;
+            margin-top: -15px;
+        }
+        .galery h2{
+            font-size: 52px;
+            color: #000;
+        }
+        .sub-sec1 img{
+            margin-right: 30px;
+            border-radius: 20px;
+        }
+        .sub-sec2 img{
+            margin-top: 33px;
+            margin-right: 30px;
+            border-radius: 20px;
+        }
+        .sec2 img{
+            border-radius: 20px;
+        }
+        .about h2{
+            color: #000;
+            font-size: 52px;
+        }
+
+        .text-info p{
+            color: #000;
+            font-size: 30px;
+        }
+
+        .text-info p b{
+            font-size: 34px;
+        }
+
+        .quest-title h2{
+            color: #fff;
+            font-size: 52px;
+        }
+        .firstform input{
+            background-color: #000;
+            border: 0;
+        }
+
+        .firstform hr{
+            color: #fff;
+            width: 200px;
+            margin-top: -2px;
+            margin-bottom: 50px;
+        }
+
+        .secondform hr{
+            color: #fff;
+            width: 200px;
+            margin-top: -2px;
+            margin-bottom: 50px;
+        }
+        .secondform input{
+            background-color: #000;
+            border: 0;
+        }
+        .bg-img img{
+            opacity: 10%;
+        }
+        .messange input{
+            background-color: #000;
+            border: 0;
+        }
+        .messange hr{
+            color: #fff;
+            width: 500px;
+            margin-top: -2px;
+            margin-bottom: 50px;
+        }
+
+        .btn-danger a{
+            text-decoration: none;
+            color:#fff;
+        }
+
+        footer{
+            margin-top: 1px;
+            padding-top: 20px;
+            background-color: #000;
+            align-items: center;
+        }
+
+        .call-num span{
+            font-size: 20px;
+        }
+
+        .contact h2{
+            font-size: 52px;
+            margin-bottom: 60px;
+        }
+
+        .cont h2{
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 50px;
+        }
+
+        .signin{
+            font-size: 26px;
+
+            padding: 5px 20px;
+            border-radius: 20px;
+            margin-left: 100px;
+        }
+        .tr{
+            margin-left: 20px;
+            font-size: 26px;
+
+            padding: 5px 20px;
+            border-radius: 20px;
+        }
+        .Log{
+            font-size: 30px;
+            color:#00a082;
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+        }
+        .brand{
+            color: green;
+        }
+        .menu{
+            margin-top: 20px;
+            margin-left: -50px;
+        }
+        .offer{
+            margin-left: 100px;
+        }
+        .offer h1{
+            font-size: 60px;
+            margin-top: 100px;
+            text-align: center;
+        }
+        .offer span{
+            color: #00a082;
+        }
+        .signin{
+            font-size: 26px;
+            background-color: #00a082;
+            padding: 5px 20px;
+            border-radius: 20px;
+            margin-left: 160px;
+        }
+        .Log{
+            font-size: 30px;
+            color:#00a082;
+        }
+        .list a{
+            margin-left: 100px;
+            font-size: 20px;
+        }
+        .container {
+            margin-top:50px;
+            max-width: 1200px;
+
+            padding: 0 20px;
+        }
+        @media(max-width:1024px) {
+            .container {
+                max-width: 100%;
+            }
+            header .container {
+                max-width: 90%;
+            }
+        }
+        header {
+            border-bottom: 1px solid rgb(243, 243, 243);
+        }
+        header .container{
+            display: flex;
+            justify-content:space-between;
+            padding: 15px 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        p {
+            margin: 0.5rem;
+        }
+        .bag {
+            margin-left: 50px;
+            font-size: 28px;
+            position: relative;
+        }
+        .bag span {
+            display: block;
+            background: #E20000;
+            color: #fff;
+            width: 1.3rem;
+            height: 1.3rem;
+            text-align: center;
+            border-radius: 100%;
+            line-height: 1.3rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+            position: absolute;
+            right: -12px;
+            top: 19px;
+        }
+        @media(min-width:800px) {
+            .cards {
+                display: flex;
+                justify-content: space-around;
+                padding: 3rem 0 0 0;
+            }
+            .card {
+                width: 34%;
+            }
+        }
+
+        .card {
+            border: solid #ccc 1px;
+            border-radius: 20px;
+            overflow: hidden;
+            line-height: 1.5rem;
+            padding-bottom: 20px;
+            margin: 0 10px;
+        }
+        .card img {
+            width: 100%;
+        }
+        .card .title {
+            font-weight: 900;
+            font-size: 26px;
+        }
+        .card .price {
+            font-size:4rem;
+            font-weight: 100;
+            text-align: right;
+            line-height: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+        .button {
+            border-radius: 50px;
+            display: block;
+            background: #000;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            height: 3rem;
+            width: 90%;
+            line-height: 3rem;
+            margin: auto;
+            transition: all .3s ease;
+        }
+        .button:hover {
+            background: #2c2c2c;
+        }
+        .cart {
+            width: 30%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            background: #fff;
+            box-shadow: 0px 0px 5px #d4d4d4;
+            font-size: 16px;
+            transition: all .5s ease;
+        }
+        .activo {
+            right: 0;
+        }
+        .cart #minicart {
+            padding: 1.3rem;
+        }
+
+        .cart #minicart .button {
+            margin-top: 2rem;
+        }
+        .cart table {
+            border-collapse: collapse;
+        }
+        .cart th, .cart td {
+            padding: 10px;
+            text-align: left;
+        }
+        .closecart {
+            font-size: 2rem;
+            position: absolute;
+            right: 10px;
+        }
+        .deletebtn {
+            display: block;
+            background: #E20000;
+            color: #fff;
+            width: 1.5rem;
+            height: 1.5rem;
+            text-align: center;
+            border-radius: 100%;
+            line-height: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Otrick pizza</title>
+    <link class="favicon" rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/80e7d89c39.js"></script>
+</head>
+
+<body>
+<header class="header" style="background-color:#ffc244">
+    <div class="container">
+        <div class="nav">
+
+            <div class="Log">
+                <span class="brand">Otrick Pizza</span>
+            </div>
+
+            <ul class="menu">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/tours" target="_blank">Tours</a>
+                </li>
+                <li>
+                    <a href="/service">Service</a>
+                </li>
+                <li>
+                    <a href="/contacts">Contacts</a>
+                </li>
+                <div class="reg">
+                    <i class="fa-solid fa-cart-arrow-up"></i>
+                    <a href="/register" class="signin">Start</a>
+                </div>
+                <div class="reg">
+                    <i class="fa-solid fa-cart-arrow-up"></i>
+                    <a href="/log" class="tr">Log</a>
+                </div>
+                <a href="#" class="bag">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </ul>
+        </div>
+
+</header>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<div class="cart">
+    <a href="#" class="closecart"><i class="fas fa-times"></i></a>
+    <div id="minicart">
+        <table id="lista-carrito" class="u-full-width">
+            <thead>
+            <tr>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <a href="#" id="vaciar-carrito" class="button u-full-width">
+            Clean Cart <i class="far fa-trash-alt"></i>
+        </a>
+    </div>
+</div>
+<header class="header1" style="background-color:#ffc244">
+    <div class="offer" id="offer">
+        <h1 class="h1">Delivery in the city of <span>Nur-Sultan</span></h1>
+    </div>
+    <div class="list">
+        <a href="/first_pizza"><img src="https://lifeinua.com/photos/board/2017/11/86461073.jpg" alt="first pizza" width="200" height="150" position="absolute"></a>
+        <a href="/second_pizza"><img src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614404404_54-p-pitstsa-na-temnom-fone-73.jpg" alt="" width="200" height="150"></a>
+        <a href="/third_pizza"><img src="https://kartinkin.net/uploads/posts/2021-07/1626266898_25-kartinkin-com-p-pitstsa-marinara-yeda-krasivo-foto-35.jpg" alt="" width="200" height="150"></a>
+    </div>
+    <div class="lis">
+        <a href="/fourth_pizza"><img src="https://img2.fonwall.ru/o/js/picca-eda-vypechka-zyga.jpg?route=mid&h=750" alt="" width="200" height="150"></a>
+        <a href="/fifth_pizza"><img src="https://cdn.pixabay.com/photo/2017/01/03/11/33/pizza-1949183_1280.jpg" alt="" width="200" height="150"></a>
+        <a href="/sixth_pizza"><img src="https://i1.wallbox.ru/wallpapers/main/201642/syr-pomidory-olivki-perec-picca-fast-food-pizza-pepper-tomato-cheese-olives.jpg" alt="" width="200" height="150"></a>
+    </div>
+    </div>
+</header>
+
+<div class="cards container" style="margin-bottom: 50px">
+    <h1>Menu of Pizza</h1>
+    <div class="card">
+        <img src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614404404_54-p-pitstsa-na-temnom-fone-73.jpg" alt="" width="200" height="150">
+        <p class="title">Peperonni</p>
+        <p class="description">Pepperoni is a dried, cured, spiced sausage made from beef and pork. </p>
+        <p class="price">$15</p>
+        <a href="#" class="button" data-id="1">Add to Card</a>
+    </div>
+
+    <div class="card">
+        <img src="https://cdn.tasteatlas.com/images/dishes/2cd66aff967748e7bc9e4ff227c09182.jpg?mw=1300" alt="" width="200" height="150">
+        <p class="title">Fugazzeta</p>
+        <p class="description">Fugazzeta is a mozzarella-stuffed pizza topped with onions, originating from Argentina.</p>
+        <p class="price">$10</p>
+        <a href="#" class="button" data-id="2">Add to Card</a>
+    </div>
+
+    <div class="card">
+        <img src="https://cdn.tasteatlas.com/Images/Dishes/1ade887db3a744e3a8637ef1b729d3a8.jpg?mw=1300" width="200" height="150" position="absolute">
+        <p class="title">Alla diavola</p>
+        <p class="description">Diavola is a variety of Italian pizza that is traditionally topped with tomato sauce, mozzarella.</p>
+        <p class="price">$20</p>
+        <a href="#" class="button" data-id="3">Add to Card</a>
+    </div>
+
+</div>
+<script>
+    const bag =  document.querySelector('header .bag');
+    const cart =  document.querySelector('.cart');
+    const closecart = document.querySelector('.closecart');
+    const Carrito =  document.querySelector('#lista-carrito tbody');
+    const carrito = document.querySelector('#minicart');
+    const Btn =  document.querySelector('#vaciar-carrito');
+    const courseList = document.querySelector('.cards');
+    let ar = [];
+    let total = 0;
+
+    loadEventListeners()
+    function loadEventListeners(){
+        bag.addEventListener('click', openCart);
+        closecart.addEventListener('click', closecar)
+        courseList.addEventListener('click', addCourse);
+        carrito.addEventListener('click', eCurso);
+        Btn.addEventListener('click', ()=>{
+            ar = [];
+            limpiarHTML()
+        })
+    }
+    function openCart(e){
+        e.preventDefault();
+        cart.classList.add('activo')
+    }
+    function closecar(e) {
+        e.preventDefault();
+        cart.classList.remove('activo')
+    }
+    function addCourse(e) {
+        e.preventDefault();
+        if (e.target.classList.contains('button')) {
+            const cursoSelected = e.target.parentElement;
+            datosCurso(cursoSelected)
+        }
+    }
+    function eCurso(e){
+        if(e.target.classList.contains('deletebtn')) {
+            const cursoID = e.target.getAttribute('data-id');
+            ar = ar.filter( curso => curso.id !== cursoID);
+
+            carritoHTML();
+        }
+    }
+    function datosCurso(curso){
+        const infoCurso = {
+            image: curso.querySelector('img').src,
+            title: curso.querySelector('.title').textContent,
+            price: curso.querySelector('.price').textContent,
+            id: curso.querySelector('a').getAttribute('data-id'),
+            cantidad: 1
+        }
+        const existe = ar.some( curso => curso.id === infoCurso.id);
+        if(existe){
+            let cursos = ar.map(curso =>{
+                if(curso.id === infoCurso.id){
+                    curso.cantidad++;
+                    return curso;
+                }else {
+                    return curso;
+                }
+            });
+            ar = [...cursos];
+        }else{
+            ar = [...ar, infoCurso];
+        }carritoHTML();
+    }
+    function carritoHTML() {
+        limpiarHTML();
+        ar.forEach( curso =>{
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+            <td><img src="${curso.image}" width="100"></td>
+            <td>${curso.title}</td>
+            <td>${curso.price}</td>
+            <td>${curso.cantidad}</td>
+            <td><a href="#" class="deletebtn" data-id="${curso.id}">X</a></td>
+        `;
+            Carrito.appendChild(row);
+            total = curso.cantidad + curso.cantidad
+            console.log(total);
+        })
+
+    }
+
+    function limpiarHTML(){
+        while(Carrito.firstChild){
+            Carrito.removeChild(Carrito.firstChild)
+        }
+    }
+</script>
+</header>
+
+</body>
+<style>
+    . piz {
+        position: relative;
+        z-index: 1;
+    }
+    .foo_top_header_one {
+        background-color: #15151e;
+        color: #fff;
+    }
+    .section_padding_100_70 {
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    .foo_top_header_one {
+        color: #fff;
+    }.part {
+         margin-bottom: 30px;
+     }
+    .foo_top_header_one .part > h5 {
+        color: #fff;
+    }
+    .part h4, .part h5 {
+        margin-bottom: 30px;
+    }
+    .info > p, .info > h5, .area > a, .foo_top_header_one .part > p {
+        color: rgba(255,255,255,.5);
+    }
+    p, ul li, ol li {
+        font-weight: 300;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    .bottom_header_one {
+        background-color: #111;
+        margin-bottom: 5px;
+    }
+    .section_padding_50 {
+        padding: 50px 0;
+    }
+    .bottom_header_one p {
+        color: #fff;
+        margin: 0;
+    }
+    p, ul li, ol li {
+        font-weight: 300;
+    }
+    .bottom_header_one a {
+        color: inherit;
+        font-size: 14px;
+    }
+    a, h1, h2, h3, h4, h5, h6 {
+        font-weight: 400;
+    }
+    .m-top-15 {
+        margin-top: 15px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .widget > li {
+        display: inline-block;
+    }
+    p, ul li, ol li {
+        font-weight: 300;
+    }
+    ol li, ul li {
+        list-style: outside none none;
+    }
+    .widget a {
+        border: 1px solid #333;
+        border-radius: 6px;
+        color: #888;
+        display: inline-block;
+        font-size: 13px;
+        margin-bottom: 4px;
+        padding: 7px 12px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    .links a {
+        border-bottom: 1px solid #333;
+        color: rgba(255,255,255,.5);
+        display: block;
+        font-size: 13px;
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+    }
+    .links a {
+        color: rgba(255,255,255,.5);
+        font-size: 13px;
+    }
+    top-15 {
+        margin-top: 15px;
+    }
+    .foo_top_header_one .part > h5 {
+        color: #fff;
+    }
+    .part h4, .part h5 {
+        margin-bottom: 30px;
+    }
+    .social_links > li {
+        display: inline-block;
+    }
+    p, ul li, ol li {
+        font-weight: 300;
+    }
+    .social_links a {
+        border: 1px solid #333;
+        border-radius: 6px;
+        color: #888;
+        display: inline-block;
+        font-size: 13px;
+        margin-bottom: 3px;
+        padding: 7px 12px;
+    }
+    .area .date {
+        color: #27ae60;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .area > p {
+        color: rgba(255,255,255,.5);
+        line-height: 1.3;
+        margin-bottom: 0;
+    }
+    .thumb {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 75px;
+    }
+    .links a i {
+        padding-right: 10px;
+    }
+
+    .footer_bottom p > i,
+    .footer_bottom p > a:hover {
+        color: #27ae60;
+    }
+    .social_links_area > a:hover {
+        color: #27ae60;
+    }
+
+    .inline-style .social_links_area > a:hover {
+        background-color: transparent;
+        color: #27ae60;
+        border: 0px solid transparent;
+    }
+    .single_feature:hover .feature_text h4 {
+        color: #27ae60;
+    }
+    .area {
+        border-bottom: 1px solid #333;
+        margin-bottom: 15px;
+        padding: 0 0 15px 90px;
+        position: relative;
+        z-index: 1;
+    }
+    .links a {
+        border-bottom: 1px solid #333;
+        color: rgba(255,255,255,.5);
+        display: block;
+        font-size: 13px;
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+    }
+</style>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<footer class="piz">
+    <div class="foo_top_header_one section_padding_100_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="part">
+                        <h5>About Us</h5>
+                        <p>Our website is dedicated to those people who like to eat well. For us, Otirick pizza is not just pizza. It's pizza too, but first of all it's a big deal that inspires us, makes us wake up every morning and continue working with interest.</p>
+
+                    </div>
+                    <div class="part m-top-15">
+                        <h5>Social Links</h5>
+                        <ul class="social_links">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="part">
+                        <h5>Tags Widget</h5>
+                        <ul class="widget">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Buy</a></li>
+                            <li><a href="#">Service</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="part m-top-15">
+                        <h5>Important Links</h5>
+                        <ul class="links">
+                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Terms & Conditions</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>About menu</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Help & Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="part">
+                        <h5>Latest News</h5>
+                        <div class="area">
+                            <div class="thumb">
+                                <img class="img-fluid" src="https://viva-lady.com/wp-content/uploads/2021/11/piczcza.jpg" alt="">
+
+                            </div>
+                            <a href="#">The best of the April</a>
+                            <p class="date">22 April 2022</p>
+                            <p>California Style. California-style pizza is really just a combination of other pizza styles, spruced up with a local twist.</p>
+                        </div>
+                        <div class="area">
+                            <div class="thumb">
+                                <img class="img-fluid" src="https://рисихаси.рф/assets/images/products/89/0066a.jpg" alt="">
+                            </div>
+                            <a href="#">The new pizza</a>
+                            <p class="date">21 April 2022</p>
+                            <p>The Marinara is the purist form of pizza. It is vegan and consists only of dough, San Marzano tomato sauce</p>
+                        </div>
+                        <div class="area">
+                            <div class="thumb">
+                                <img class="img-fluid" src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614404404_54-p-pitstsa-na-temnom-fone-73.jpg" alt="">
+                            </div>
+                            <a href="#">The one of the favourite</a>
+                            <p class="date">25 April 2022</p>
+                            <p>The beauty of this pizza is all the oils in the bolognese float on top of the cheese.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="part">
+                        <h5>Quick Contact</h5>
+                        <div class="info">
+                            <h5>Phone:</h5>
+                            <p>+77777777777 <br> +2255 766 90 94 00</p>
+                        </div>
+                        <div class="info">
+                            <h5>Email:</h5>
+                            <p>pizza@mail.com <br> kuz@gmail.com</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A053bd947d462cc1a45aeba4070defff75501905071c0eaf68436ac9976ec698c&amp;width=400&amp;height=300&amp;lang=ru_RU" alt="" style="border: 0;margin-left:550px" />
+    <div class=" bottom_header_one section_padding_50 text-center">
+        <div class="container">
+            <div class="row">
+                <p class="footer">Otiric Pizza</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
