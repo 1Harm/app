@@ -2,7 +2,7 @@
   "name": "app",
   "version": "1.0.0",
   "description": "��#\u0000 \u0000a\u0000g\u0000a\u0000i\u0000t\u0000T\u0000e\u0000s\u0000t\u0000\r\u0000 \u0000",
-  "main": "server.js",
+  "main": "routes/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -11,13 +11,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.5.0",
     "mongoose": "^6.3.1"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/1Harm/app.git"

@@ -184,22 +184,14 @@
             }
         }
     </style>
-    <form id="signinForm">
-        <div class="field">
-            <input id="login" class="input" type="text" />
-            <p id="label_login" class="labels">LOGIN</p>
-            <span id="valid_login">* field must be filled</span>
-        </div>
-        <div class="field">
-            <input id="password" class="input" type="password" />
-            <p id="label_password" class="labels">PASSWORD</p>
-            <span id="valid_password">* field must be filled</span>
-        </div>
-        <div class="field">
-            <input id="signinButton" type="submit" value="Sign in" />
-            <label id="rememberMe">
-                <input type="checkbox" />Remember me</label>
-        </div>
+    <form action="getUsers" method="get">
+        <button type="submit">Get all users</button>
+        <div name="results"></div>
+    </form>
+    <form action="updateUser" method="post">
+        <input type="text" name="selectUser" id="selectUser" placeholder="Old Data">
+        <input type="text" name="newData" id="newData" placeholder="New Data">
+        <button type="submit">Update</button>
     </form>
     <div id="loader">
         <p>LOADING</p>
